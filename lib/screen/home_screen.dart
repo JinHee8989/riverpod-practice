@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_practice/layout/default_layout.dart';
 import 'package:riverpod_practice/screen/auto_dispose_modifier_screen.dart';
+import 'package:riverpod_practice/screen/code_generation_screen.dart';
 import 'package:riverpod_practice/screen/family_modifier_screen.dart';
 import 'package:riverpod_practice/screen/future_provider_screen.dart';
 import 'package:riverpod_practice/screen/listen_provider_screen.dart';
@@ -74,6 +75,12 @@ class HomeScreen extends StatelessWidget {
                     .push(MaterialPageRoute(builder: (_) => ProviderScreen()));
               },
               child: Text('ProviderScreen')),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => CodeGenerationScreen()));
+              },
+              child: Text('CodeGenerationScreen')),
         ],
       ),
     );
